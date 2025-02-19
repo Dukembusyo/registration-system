@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free WiFi Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Free WiFi</h2>
+        <p>Please enter your details to connect.</p>
+        <form action="connect.php" method="post">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">Connect</button>
+        </form>
+    </div>
+</body>
+</html>
