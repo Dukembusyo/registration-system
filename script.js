@@ -10,3 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+  window.onclick = function(event) {
+        const modals = ['membershipForm', 'electionForm'];
+        modals.forEach(id => {
+            const modal = document.getElementById(id);
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    };

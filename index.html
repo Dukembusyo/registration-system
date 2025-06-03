@@ -16,25 +16,40 @@
         <h1>@KUCSA</h1>
         <p class="tagline">Uniting & Empowering Kitui County Students!</p>
 
-        <!-- Buttons -->
-        <div class="links">
-            <a href="https://forms.office.com/r/U0jBN0tqzC" class="link-btn">
-                <img src="images/istockphoto-1317983119-612x612.jpg" alt="Icon"> 
-                KUCSA MEMBERSHIP REGISTRATION
-            </a>
-            <a href="https://forms.office.com/r/quf0ZK1NCy" class="link-btn">
-                <img src="images/3-PNG.png" alt="Icon"> 
-                KUCSA ELECTIONS APPLICATION FORM
-            </a>
-            <a href="https://chat.whatsapp.com/Jfz8qczqYLO5EemAWpZ4Tc" class="link-btn">
-                <img src="images/download (3).jpg" alt="Icon"> 
-                JOIN KUCSA OFFICIAL WHATSAPP GROUP
-            </a>
-            <a href="https://kucsaasociation.netlify.app" class="link-btn" target="_blank" rel="noopener noreferrer">
-                VISIT OUR OFFICIAL WEBSITE
-            </a>
-            
-        </div>
+<!-- Buttons -->
+<div class="links">
+    <button class="link-btn" onclick="document.getElementById('membershipForm').style.display='block'">
+        <img src="images/istockphoto-1317983119-612x612.jpg" alt="Icon"> 
+        KUCSA MEMBERSHIP REGISTRATION
+    </button>
+    <button class="link-btn" onclick="document.getElementById('electionForm').style.display='block'">
+        <img src="images/3-PNG.png" alt="Icon"> 
+        KUCSA ELECTIONS APPLICATION FORM
+    </button>
+    <a href="https://chat.whatsapp.com/Jfz8qczqYLO5EemAWpZ4Tc" class="link-btn">
+        <img src="images/download (3).jpg" alt="Icon"> 
+        JOIN KUCSA OFFICIAL WHATSAPP GROUP
+    </a>
+    <a href="https://kucsaasociation.netlify.app" class="link-btn" target="_blank" rel="noopener noreferrer">
+        VISIT OUR OFFICIAL WEBSITE
+    </a>
+</div>
+
+<!-- Modals -->
+<div id="membershipForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('membershipForm').style.display='none'">&times;</span>
+        <iframe src="https://forms.office.com/r/U0jBN0tqzC" title="Membership Form"></iframe>
+    </div>
+</div>
+
+<div id="electionForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('electionForm').style.display='none'">&times;</span>
+        <iframe src="https://forms.office.com/r/quf0ZK1NCy" title="Election Form"></iframe>
+    </div>
+</div>
+
 
         <!-- Social Icons -->
         <div class="social-icons">
