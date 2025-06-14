@@ -69,4 +69,4 @@ function changeBackground() {
 changeBackground();
 
 // Change every 6 seconds
-setInterval(changeBackground, 6000);
+setInterval(changeBackground, 2000);
