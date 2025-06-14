@@ -1,66 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUCSA | Kitui County University & College Students Association</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
-    <script defer src="script.js"></script>  <!-- External JavaScript -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KUCSA | Kitui County University Students Association</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Logo -->
-        <img src="images/1736934884019 (1).jpg" alt="KUCSA Logo" class="logo">
-        
-        <!-- Title & Tagline -->
-        <h1>@KUCSA</h1>
-        <p class="tagline">Uniting & Empowering Kitui County Students!</p>
 
-<!-- Buttons -->
-<div class="links">
-    <button class="link-btn" onclick="document.getElementById('membershipForm').style.display='block'">
-        <img src="images/istockphoto-1317983119-612x612.jpg" alt="Icon"> 
+    <body>
+  <!-- Background Image Slideshow -->
+  <div class="background-slideshow" id="bg-slideshow"></div>
+
+  <!-- Greenish Overlay -->
+  <div class="bg-overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- your existing content -->
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="images/1736934884019 (1).jpg" alt="KUCSA Logo" class="logo" />
+
+    <!-- Title & Tagline -->
+    <h1>@KUCSA</h1>
+    <p class="tagline">Uniting & Empowering Kitui County Students!</p>
+
+    <!-- Buttons -->
+    <div class="links">
+      <button class="link-btn" onclick="openModal('membershipForm')">
+        <i class="fas fa-user-plus"></i>
         KUCSA MEMBERSHIP REGISTRATION
-    </button>
-    <button class="link-btn" onclick="document.getElementById('electionForm').style.display='block'">
-        <img src="images/3-PNG.png" alt="Icon"> 
+      </button>
+
+      <button class="link-btn" onclick="openModal('electionForm')">
+        <i class="fas fa-vote-yea"></i>
         KUCSA ELECTIONS APPLICATION FORM
-    </button>
-    <a href="https://chat.whatsapp.com/Jfz8qczqYLO5EemAWpZ4Tc" class="link-btn">
-        <img src="images/download (3).jpg" alt="Icon"> 
+      </button>
+
+      <a href="https://chat.whatsapp.com/Jfz8qczqYLO5EemAWpZ4Tc" class="link-btn">
+        <i class="fab fa-whatsapp"></i>
         JOIN KUCSA OFFICIAL WHATSAPP GROUP
-    </a>
-    <a href="https://kucsaasociation.netlify.app" class="link-btn" target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="https://kucsaassociation.netlify.app/" class="link-btn" target="_blank">
+        <i class="fas fa-globe"></i>
         VISIT OUR OFFICIAL WEBSITE
-    </a>
+      </a>
+    </div>
+
+    <!-- Modals -->
+    <div id="membershipForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('membershipForm')">&times;</span>
+        <iframe src="https://forms.gle/GnQoNJTRGG2mEmyH7" title="Membership Form"></iframe>
+      </div>
+    </div>
+
+    <div id="electionForm" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('electionForm')">&times;</span>
+        <iframe src="https://forms.office.com" title="Election Form"></iframe>
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+<!-- ... keep the rest of the code above unchanged -->
+
+<!-- Social Icons (Email, Facebook, TikTok, X) -->
+<div class="social-icons">
+  <a href="mailto:kucsa7767@gmail.com" title="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61554515968248" title="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.tiktok.com/@kucsa0" title="TikTok" target="_blank">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://x.com/KKucsa" title="X (Twitter)" target="_blank">
+    <i class="fab fa-x-twitter"></i>
+  </a>
 </div>
 
-<!-- Modals -->
-<div id="membershipForm" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('membershipForm').style.display='none'">&times;</span>
-        <iframe src="https://forms.office.com/r/U0jBN0tqzC" title="Membership Form"></iframe>
-    </div>
-</div>
-
-<div id="electionForm" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('electionForm').style.display='none'">&times;</span>
-        <iframe src="https://forms.office.com/r/quf0ZK1NCy" title="Election Form"></iframe>
-    </div>
-</div>
-
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="mailto:kucsa7767@gmail.com"><img src="images/download (1).jpg" alt="Email"></a>
-            <a href="https://www.facebook.com/61554515968248/"><img src="images/download (2).jpg" alt="Twitter"></a>
-           
-        </div>
-
-        <!-- CTA Button -->
-        <a href="https://forms.office.com/r/U0jBN0tqzC" class="cta-btn">Join KUCSA Today</a>
-    </div>
+    <!-- CTA Button -->
+    <a href="https://forms.gle/GnQoNJTRGG2mEmyH7" class="cta-btn">Join KUCSA Today</a>
+  </div>
 </body>
 </html>
-
