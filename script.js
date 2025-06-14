@@ -24,6 +24,10 @@ window.addEventListener('click', function (event) {
 
 
 const backgrounds = [
+  'images/kise10.jpg',
+  'images/kise12.jpg',
+  'images/kise13.jpg',
+  'images/kise14.jpg',
   'images/1F1A8072.jpg',
   'images/IMG_5679.jpg',
   'images/kise1.jpg',
@@ -31,6 +35,11 @@ const backgrounds = [
   'images/kise4.jpg',
   'images/kise5.jpg',
   'images/kise9.jpg',
+  'images/kise16.jpg',
+    'images/IMG_ (201).jpg',
+  'images/IMG-20240401-WA0410(1).jpg',
+
+  
   'images/IMG-20240815-WA0031.jpg',
   'images/kise7.jpg',
     'images/IMG-20241229-WA0285.jpg'
