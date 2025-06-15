@@ -46,12 +46,19 @@ const backgrounds = [
 ];
 
 const effects = ['fade', 'slide-left', 'slide-right', 'zoom-in', 'zoom-out'];
+const timings = [5000, 6000, 7000, 5500, 6500]; // custom timing for variation
 
 let current = 0;
 let active = true;
 
 const bg1 = document.getElementById('bg1');
 const bg2 = document.getElementById('bg2');
+
+// Preload all images
+backgrounds.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
 
 function changeBackground() {
   const nextIndex = (current + 1) % backgrounds.length;
@@ -65,10 +72,13 @@ function changeBackground() {
   nextBg.className = `background-slideshow ${effect} active`;
   currentBg.className = `background-slideshow ${effect}`;
 
-  // Switch active div after transition
   active = !active;
   current = nextIndex;
+
+  // Schedule next transition with varied timing
+  const nextTiming = timings[Math.floor(Math.random() * timings.length)];
+  setTimeout(changeBackground, nextTiming);
 }
 
+// Initial launch
 changeBackground();
-setInterval(changeBackground, 6000);
