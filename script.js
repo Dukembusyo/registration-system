@@ -24,6 +24,7 @@ window.addEventListener('click', function (event) {
 
 
 const backgrounds = [
+  'images/WhatsApp Image 2025-06-14 at 18.37.57.jpeg',
   'images/kise10.jpg',
   'images/kise12.jpg',
   'images/kise13.jpg',
