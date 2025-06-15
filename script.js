@@ -46,7 +46,7 @@ const backgrounds = [
 ];
 
 const effects = ['fade', 'slide-left', 'slide-right', 'zoom-in', 'zoom-out'];
-const timings = [5000, 6000, 7000, 5500, 6500]; // custom timing for variation
+const timing = 8000; // consistent 8 seconds
 
 let current = 0;
 let active = true;
@@ -67,18 +67,16 @@ function changeBackground() {
   const currentBg = active ? bg1 : bg2;
   const nextBg = active ? bg2 : bg1;
 
-  // Prepare next background
   nextBg.style.backgroundImage = `url('${backgrounds[nextIndex]}')`;
-  nextBg.className = `background-slideshow ${effect} active`;
+
+  // reset classes
   currentBg.className = `background-slideshow ${effect}`;
+  nextBg.className = `background-slideshow ${effect} active`;
 
   active = !active;
   current = nextIndex;
 
-  // Schedule next transition with varied timing
-  const nextTiming = timings[Math.floor(Math.random() * timings.length)];
-  setTimeout(changeBackground, nextTiming);
+  setTimeout(changeBackground, timing);
 }
 
-// Initial launch
 changeBackground();
