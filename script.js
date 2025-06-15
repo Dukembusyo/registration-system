@@ -47,26 +47,28 @@ const backgrounds = [
 
 const effects = ['fade', 'slide-left', 'slide-right', 'zoom-in', 'zoom-out'];
 
-let index = 0;
-const bgSlideshow = document.getElementById('bg-slideshow');
+let current = 0;
+let active = true;
+
+const bg1 = document.getElementById('bg1');
+const bg2 = document.getElementById('bg2');
 
 function changeBackground() {
-  // Remove previous transition class
-  bgSlideshow.className = 'background-slideshow';
-
-  // Set new image
-  bgSlideshow.style.backgroundImage = `url('${backgrounds[index]}')`;
-
-  // Randomly choose a transition effect
+  const nextIndex = (current + 1) % backgrounds.length;
   const effect = effects[Math.floor(Math.random() * effects.length)];
-  bgSlideshow.classList.add('bg-transition', effect);
 
-  // Update index
-  index = (index + 1) % backgrounds.length;
+  const currentBg = active ? bg1 : bg2;
+  const nextBg = active ? bg2 : bg1;
+
+  // Prepare next background
+  nextBg.style.backgroundImage = `url('${backgrounds[nextIndex]}')`;
+  nextBg.className = `background-slideshow ${effect} active`;
+  currentBg.className = `background-slideshow ${effect}`;
+
+  // Switch active div after transition
+  active = !active;
+  current = nextIndex;
 }
 
-// Initial load
 changeBackground();
-
-// Change every 6 seconds
 setInterval(changeBackground, 6000);
